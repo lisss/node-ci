@@ -1,0 +1,67 @@
+Arguments: 
+  /Users/liss/.nvm/versions/node/v13.13.0/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js test
+
+PATH: 
+  /Users/liss/.pyenv/shims:/Users/liss/.nvm/versions/node/v13.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  13.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/liss/Work/Dev/Git/ntbts/no_review/node-js-course/AdvancedNodeStarter/package.json: Unexpected token } in JSON at position 157
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "jest": {
+      "setupTestFrameworkScriptFile": "./tests/setup.js",
+    },
+    "scripts": {
+      "start": "node index.js",
+      "server": "nodemon index.js --ignore tests",
+      "client": "npm run start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\"",
+      "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+      "heroku-postbuild": "npm run build",
+      "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "aws-sdk": "^2.188.0",
+      "body-parser": "^1.17.2",
+      "concurrently": "^3.5.0",
+      "cookie-session": "^2.0.0-beta.2",
+      "express": "^4.15.3",
+      "jest": "^22.1.4",
+      "migrate-mongoose": "^3.2.2",
+      "mongoose": "^5.11.18",
+      "nodemon": "^1.11.0",
+      "passport": "^0.3.2",
+      "passport-google-oauth20": "^2.0.0",
+      "path-parser": "^2.0.2",
+      "puppeteer": "^1.0.0",
+      "redis": "^2.8.0",
+      "uuid": "^3.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
