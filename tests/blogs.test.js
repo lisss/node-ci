@@ -63,7 +63,7 @@ describe('when logged in', async () => {
     });
 });
 
-describe.only('when not logged in', async () => {
+describe('when not logged in', async () => {
     const path = '/api/blogs';
     const actions = [
         {
@@ -80,7 +80,7 @@ describe.only('when not logged in', async () => {
         },
     ];
 
-    test.only('cannot see actions', async () => {
+    test('cannot see actions', async () => {
         const results = await page.execRequests(actions);
 
         results.forEach((result) => {

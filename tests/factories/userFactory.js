@@ -6,4 +6,4 @@ const User = mongoose.model('User', userSchema);
 
 module.exports = () => {
     return new User({}).save();
-}
+};
