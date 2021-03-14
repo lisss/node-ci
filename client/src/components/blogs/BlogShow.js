@@ -12,6 +12,7 @@ class BlogShow extends Component {
             return (
                 <img
                     src={`https://node-js-blog-666.s3.eu-central-1.amazonaws.com/${this.props.blog.imageUrl}`}
+                    alt="Post image"
                 />
             );
         }
